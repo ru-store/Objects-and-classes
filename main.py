@@ -12,6 +12,13 @@ class Student:
             if self.grades > 0 and self.grades <=10:
                 return Lecturer.grades
 
+    def __str__(self):
+        return f'Имя: {self.name}\n'
+        f'Фамилия: {self.surname}\n'
+        f'Средняя оценка за домашнее задание: {self.grades}\n'
+        f'Курсы в процессе изучения: {", ".join(self.courses_in_progress)}\n'
+        f'Завершенные курсы: {", ".join(self.finished_courses)}'
+
 
 class Mentor:
     def __init__(self, name, surname):
@@ -45,6 +52,10 @@ print(best_student.grades)
 class Lecturer(Mentor):
     grades = {}
 
+    def __str__(self):
+        return f'Имя: {self.name}\n'
+        f'Фамилия: {self.surname}\n'
+        f'Средняя оценка за лекции: {self.courses_attached[grades]}'
 
 class Reviewer(Mentor):
     def rate_hw(self, student, course, grade):
@@ -55,7 +66,9 @@ class Reviewer(Mentor):
                 student.grades = [grade]
 
         
-
+    def __str__(self):
+        return f'Имя: {self.name}\n'
+        f'Фамилия: {self.surname}'
 
 
 
