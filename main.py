@@ -76,6 +76,25 @@ class Lecturer(Mentor):
         f'Фамилия: {self.surname}\n'
         f'Средняя оценка за лекции: {self.courses_attached[grades]}'
 
+@classmethod
+
+def __average_grade(cls, other):
+    if isinstance(other):
+        return other.grades
+
+def __eq__(self, other):
+    grade = self.__averege_grade(other(float, Lecturer))
+    return self.grades
+
+def __lt__(self, other):
+    grade = self.__averege_grade(other,(float, Lecturer))
+    return self.grades
+
+def __lt__(self, other):
+    grade = self.__averege_grade(other,(float, Lecturer))
+    return self.grades
+
+
 class Reviewer(Mentor):
     def rate_hw(self, student, course, grade):
         if isinstance(student, Student) and course in self.courses_attached and course in student.courses_in_progress:
