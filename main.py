@@ -7,7 +7,7 @@ class Student:
         self.courses_in_progress = []
         self.grades = {}
 
-    def my_method (self, lecturer, course, grade):
+    def my_method(self, lecturer, course, grade):
         if isinstance(lecturer, Lecturer) and course in self.courses_in_progress:
             if self.grades > 0 and self.grades <=10:
                 return Lecturer.grades
@@ -18,6 +18,25 @@ class Student:
         f'Средняя оценка за домашнее задание: {self.grades}\n'
         f'Курсы в процессе изучения: {", ".join(self.courses_in_progress)}\n'
         f'Завершенные курсы: {", ".join(self.finished_courses)}'
+
+@classmethod
+def __average_grade(cls, other):
+    if isinstance(other):
+        return other.grades
+
+def __eq__(self, other):
+    grade = self.__averege_grade(other(float, Lecturer))
+    return self.grades
+
+def __lt__(self, other):
+    grade = self.__averege_grade(other,(float, Lecturer))
+    return self.grades
+
+def __lt__(self, other):
+    grade = self.__averege_grade(other,(float, Lecturer))
+    return self.grades
+
+
 
 
 class Mentor:
