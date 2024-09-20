@@ -108,5 +108,16 @@ class Reviewer(Mentor):
         return f'Имя: {self.name}\n'
         f'Фамилия: {self.surname}'
 
+student = Student("Alex", "Romanov", "male" )
+student.finished_courses = ["Python", "Git"]
+student.courses_in_progress = ["OOP"]
+student.grades = {"Python": 10, "Git": 9.8}
+student_2 = Student("Polina", "Abramova", "female")
+student_2.finished_courses = ["Python", "Git"]
+student_2.courses_in_progress = ["OOP"]
+student_2.grades = {"Python": 9.9, "Git": 9.5}
+
+
+
 
 
